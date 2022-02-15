@@ -20,6 +20,14 @@ function App() {
             {/* We can use JSON.stringify() to dump raw data into our DOM */}
             {JSON.stringify(creatureList)}
           </pre>
+          <p>Getting One Creature, looks like this: {creatureList[0].name}</p>
+          <ul>
+            {creatureList.map(creature =>  
+              (<li key= {creature.name}>
+                {creature.name} is from {creature.origin}
+              </li>)
+            )}
+          </ul>
         </div>
       </div>
     </>
